@@ -1,0 +1,76 @@
+{{!-- <h1>test, hola {{this.name}}</h1> --}}
+<div class="p-3 container-fluid d-flex justify-content-between bg-success bg-opacity-10">
+        <h2>Bienvenido {{name}} {{lastName}}</h2>
+        <a href="/logout" class="btn btn-danger mb-1">LOGOUT
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+            </svg>
+        </a>
+</div>
+<div class="container">
+    <div class="mt-5 mb-3">
+        <h2>Productos <span id="text1"></span></h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody id="prodData">
+                <!-- products data here -->
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <hr />
+    <br>
+    <div class="mb-3">
+        <h2>Centro de mensajes - <span id="porcentaje"></span></h2>
+        <div style="width:60%; margin: auto">
+            <form onsubmit="return sendMsg()">
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="edad" name="edad" placeholder="Edad">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="alias" name="alias" placeholder="Alias">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="avatar" name="avatar" placeholder="Avatar (URL)">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" style="height: 90px;" id="mensaje" name="mensaje"
+                        placeholder="Mensaje"></textarea>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" value="Enviar mensaje" class="btn btn-dark" />
+                </div>
+            </form>
+        </div>
+        <br>
+        <div class="container chat" id="chatContainer">
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/index.js"></script>
+
+
+

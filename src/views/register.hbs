@@ -1,0 +1,33 @@
+<div class="border border-primary p-3 mt-3 rounded border-opacity-50 shadow" style="max-width: 600px; margin: auto;">
+    <h1>Registrarse
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
+        <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+        <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+        <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+</svg>
+    </h1>
+    <form action="/register" method="POST">
+        <div class="mb-3">
+            <label for="firstName" class="form-label">Nombre</label>
+            <input type="text" name="firstName" class="form-control" id="firstName">
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="form-label">Apellido</label>
+            <input type="text" name="lastName" class="form-control" id="lastName">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" name="password" class="form-control" id="password">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-info rounded p-2 me-2">Registrarse</button>
+            <a href="/login" class="btn btn-outline-success rounded text-center p-2">Ir a login</a>
+        </div>
+    </form>
+    <a href="/" class="btn btn-outline-secondary rounded text-center mt-3">Volver</a>
+</div>
+<script>document.title= "Passport Session - Registro"</script>
